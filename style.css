@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* transition: all .1s ease; */
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+    --bg-color: #fff;
+    --sidebar: #287bff;
+    --text: #1b1e23;
+    --icon: #fff;
+    --hover: #00ff00;
+}
+
+/* Dark mode */
+
+.theme {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: silver;
+}
+
+.dark{
+    background-color: var(--text) !important;
+    color: var(--bg-color) !important;
+}
+
+/* Toggle sidebar */
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.navigation.active {
+    width: 90px;
+}
+
+/* Main */
+
+.container {
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: .6fr 8fr;
+    grid-template-rows: 100vh 100vh;
+}
+
+.navigation {
+    position: relative;
+    width: 280px;
+    height: 100%;
+    background: var(--sidebar);
+    border-right: 10px solid var(--hover);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation ul li a img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: block;
+    min-width: 40px;
+    line-height: 40px;
+    margin-right: 25px;
+    margin-left: 15px;
+}
+
+
+.menubar i{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 25px;
+    color: var(--icon);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    z-index: 99;
+}
+
+.container-logo .eu {
+    width: 60px;
+    height: 60px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.container-logo {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 85px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+#name.title{
+    margin-left: -5px;
+}
+
+.navigation ul .container-logo .title {
+    color: var(--icon);
+    font-size: 20px;
+}
+
+.navigation ul .container-logo span.active {
+    display: none;
+}
+
+#containerUL{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.navigation ul{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    height: 60px;
+    display: flex;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+    background: var(--hover);
+}
+
+.navigation ul li a {
+    white-space: nowrap;
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--icon);
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+    color: var(--text);
+}
+
+/* Curve Outside */
+
+.navigation ul li:hover a ::before,
+.navigation ul li.hovered a ::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 50px;
+    top: -50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--hover);
+    pointer-events: none;
+}
+
+.navigation ul li:hover a ::after,
+.navigation ul li.hovered a ::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 50px;
+    bottom: -50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--hover);
+    background-color: transparent;
+    pointer-events: none;
+}
+
+/* Social media */
+
+.navigation #box-social-media {
+    height: 50px;
+    width: 95.1%;
+    position: absolute;
+    bottom: 15%;
+    line-height: 50px;
+}
+
+.navigation .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0px 20px;
+    font-size: 25px;
+    transition: .4s ease-in-out;
+}
+
+.fa-github {
+    color: #B9BBBD;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    transition: .4s ease-in-out;
+}
+
+.fa-linkedin {
+    color: #0A66C2;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    transition: .4s ease-in-out;
+}
+
+.fa-square-instagram {
+    color: #C61060;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    transition: .4s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: translateY(5px);
+}
+
+.fa-linkedin:hover {
+    transform: translateY(5px);
+}
+
+.fa-square-instagram:hover {
+    transform: translateY(5px);
+}
+
+/* Main Sobre */
+
+.container-main {
+    background-color: var(--bg2) ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 10px solid var(--hover); */
+}
+
+#sobre{
+    background-color: var(--bg2);
+    color: var(--bg1);
+}
+
+.container-main .content {
+    width: 90%;
+    height: 88%;
+}
+
+.container-main .content h1 {
+    font-size: 28px;
+    margin: 22px 0 ;
+}
+
+.container-main .content p {
+    text-indent: 30px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.p {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
