@@ -28,11 +28,19 @@ menubar.addEventListener("click", menuBarRotate)
 
 // Dark Theme
 
-const iconDark = document.querySelector(".theme")
+// const iconDark = document.querySelector(".theme")
 const containerMain = document.querySelector(".container-main")
 const sideBar = document.querySelector(".navigation")
 
-iconDark.addEventListener("click", () => {
+// iconDark.addEventListener("click", () => {
+//     containerMain.classList.toggle("dark")
+//     sideBar.classList.toggle("dark")
+// })
+
+const ball = document.querySelector("#ball")
+
+ball.addEventListener("click", () => {
+    ball.classList.toggle("movBall")
     containerMain.classList.toggle("dark")
     sideBar.classList.toggle("dark")
 })
