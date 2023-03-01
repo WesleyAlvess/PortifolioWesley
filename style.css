@@ -16,10 +16,11 @@ body{
 
 :root {
     --bg-color: #fff;
-    --sidebar: #287bff;
-    --text: #1b1e23;
+    --sidebar: #b4c4cc;
+    /* --sidebar: #007fe3; */
+    --text: #353839;
     --icon: #fff;
-    --hover: #00ff00;
+    --hover: #fff;
 }
 
 /* Dark mode */
@@ -90,11 +91,15 @@ body{
     background-color: var(--bg-color);
     display: grid;
     grid-template-columns: .6fr 8fr;
-    grid-template-rows: 100vh 100vh;
+    grid-template-rows: 100vh;
+    height: 100vh;
+    overflow-y: scroll;
 }
 
 .navigation {
-    position: relative;
+    position: sticky;
+    left: 0;
+    top: 0;
     width: 280px;
     height: 100%;
     background: var(--sidebar);
