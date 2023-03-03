@@ -17,13 +17,10 @@ body{
 :root {
     --bg-color: #fff;
     --sidebar: #b4c4cc;
-    /* --sidebar: #007fe3; */
     --text: #353839;
     --icon: #fff;
     --hover: #fff;
 }
-
-/* Dark mode */
 
 .theme {
     position: absolute;
@@ -47,7 +44,7 @@ body{
     color: rgb(255, 170, 0);
 }
 
-.theme i{
+.theme fas{
     font-size: 15px;
 }
 
@@ -74,7 +71,6 @@ body{
     transform: translateX(23px);
 }
 
-
 /* Toggle sidebar */
 
 .rotate {
@@ -90,7 +86,7 @@ body{
 .container {
     background-color: var(--bg-color);
     display: grid;
-    grid-template-columns: .6fr 8fr;
+    grid-template-columns: .6fr 15fr;
     grid-template-rows: 100vh;
     height: 100vh;
     overflow-y: scroll;
